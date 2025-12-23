@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,15 +37,15 @@
                             900: '#166534',
                         },
                         strongOrange: {
-                          100: '#FFE8D5',
-                          200: '#FDBA74',
-                          300: '#F97316',
-                          400: '#EA580C',
-                          500: '#C2410C',
-                          600: '#9A3412',
-                          700: '#7C2D12',
-                          800: '#652B19',
-                          900: '#5A271A',
+                            100: '#FFE8D5',
+                            200: '#FDBA74',
+                            300: '#F97316',
+                            400: '#EA580C',
+                            500: '#C2410C',
+                            600: '#9A3412',
+                            700: '#7C2D12',
+                            800: '#652B19',
+                            900: '#5A271A',
                         }
                     }
                 }
@@ -56,17 +57,108 @@
             scroll-behavior: smooth;
         }
     </style>
+    <style>
+        .box {
+            width: 200px;
+            /* Full width */
+            height: 200px;
+            /* Full height */
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 60%;
+            height: 60%;
+        }
+
+        .wave {
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            /* Adjusted width for laptop screens */
+            height: 150px;
+            /* Adjusted height for laptop screens */
+            margin-left: -75px;
+            /* Adjusted margin for laptop screens */
+            margin-top: -75px;
+            /* Adjusted margin for laptop screens */
+            transform-origin: 50% 48%;
+            border-radius: 43%;
+            animation: drift 3000ms infinite linear;
+            background: #FF0000;
+            /* Red color */
+            z-index: 1;
+        }
+
+        .wave.-two {
+            animation: drift-two 7000ms infinite linear;
+            opacity: 0.4;
+            background: #FFA500;
+            /* Lighter orange color */
+            z-index: 1;
+        }
+
+        .wave.-three {
+            animation: drift-three 5000ms infinite linear;
+            background: #4682B4;
+            /* Lighter steel blue color */
+            z-index: 1;
+        }
+
+        @keyframes drift {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes drift-two {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes drift-three {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
+
 <body class="bg-tropical-100 font-sans">
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
+
         <div class="absolute inset-0 bg-strongOrange-300">
             <!-- <img src="public/HeroSectionBanner.jpg" alt="Praia tropical" class="w-full h-full object-cover"> -->
             <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
         </div>
         <div class="relative z-10 text-center px-4">
+            <div class='box'>
+                <div class='wave'></div>
+                <div class='wave -two'></div>
+                <div class='wave -three'></div>
+                <img src="public/HeroSectionBanner.jpg" alt="Praia tropical" class="w-full h-full object-cover">
+            </div>
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in">Filipe Rojas</h1>
-            <p class="text-xl md:text-2xl text-tropical-100 mb-8 max-w-2xl mx-auto animate-fade-in delay-100">Criar, conectar e inspirar pessoas sendo quem eu sou</p>
+            <p class="text-xl md:text-2xl text-tropical-100 mb-8 max-w-2xl mx-auto animate-fade-in delay-100">Criar,
+                conectar e inspirar pessoas sendo quem eu sou</p>
             <div class="animate-bounce mt-16">
                 <a href="#about" class="text-tropical-100 hover:text-white">
                     <i data-feather="chevron-down" class="w-12 h-12"></i>
@@ -84,18 +176,25 @@
             </div>
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/2">
-                    <img src="http://static.photos/travel/640x360/42" alt="Filipe Rojas" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    <img src="http://static.photos/travel/640x360/42" alt="Filipe Rojas"
+                        class="rounded-lg shadow-xl w-full h-auto object-cover">
                 </div>
                 <div class="md:w-1/2">
                     <p class="text-lg text-tropical-700 mb-6">
-                        Eu sou Felipe, apaixonado por áudio e vídeo e por trazer a experiência para as pessoas. Minha missão é conectar culturas e inspirar através de conteúdo autêntico e criativo.
+                        Eu sou Felipe, apaixonado por áudio e vídeo e por trazer a experiência para as pessoas. Minha
+                        missão é conectar culturas e inspirar através de conteúdo autêntico e criativo.
                     </p>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Influencer</span>
-                        <span class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Turismo</span>
-                        <span class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Marketing</span>
-                        <span class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Criatividade</span>
-                        <span class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Aventura</span>
+                        <span
+                            class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Influencer</span>
+                        <span
+                            class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Turismo</span>
+                        <span
+                            class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Marketing</span>
+                        <span
+                            class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Criatividade</span>
+                        <span
+                            class="px-4 py-2 bg-jungle-100 text-jungle-800 rounded-full text-sm font-medium">Aventura</span>
                     </div>
                 </div>
             </div>
@@ -111,12 +210,15 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Work 1 -->
-                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="http://static.photos/travel/640x360/1" alt="Projeto 1" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                <div
+                    class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <img src="http://static.photos/travel/640x360/1" alt="Projeto 1"
+                        class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full">
                         <h3 class="text-xl font-bold text-white mb-2">Expedição Amazônia</h3>
-                        <p class="text-tropical-100 mb-4">Documentário sobre a vida na floresta amazônica e suas belezas naturais.</p>
+                        <p class="text-tropical-100 mb-4">Documentário sobre a vida na floresta amazônica e suas belezas
+                            naturais.</p>
                         <a href="#" class="inline-flex items-center text-tropical-200 hover:text-white font-medium">
                             Ver mais <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                         </a>
@@ -126,24 +228,30 @@
                     </div>
                 </div>
                 <!-- Work 2 -->
-                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="http://static.photos/travel/640x360/2" alt="Projeto 2" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                <div
+                    class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <img src="http://static.photos/travel/640x360/2" alt="Projeto 2"
+                        class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full">
                         <h3 class="text-xl font-bold text-white mb-2">Festival Cultural</h3>
-                        <p class="text-tropical-100 mb-4">Cobertura completa do maior festival de cultura indígena da região norte.</p>
+                        <p class="text-tropical-100 mb-4">Cobertura completa do maior festival de cultura indígena da
+                            região norte.</p>
                         <a href="#" class="inline-flex items-center text-tropical-200 hover:text-white font-medium">
                             Ver mais <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
                 <!-- Work 3 -->
-                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="http://static.photos/travel/640x360/3" alt="Projeto 3" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                <div
+                    class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <img src="http://static.photos/travel/640x360/3" alt="Projeto 3"
+                        class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full">
                         <h3 class="text-xl font-bold text-white mb-2">Marca de Turismo</h3>
-                        <p class="text-tropical-100 mb-4">Desenvolvimento de estratégia de marketing digital para agência de ecoturismo.</p>
+                        <p class="text-tropical-100 mb-4">Desenvolvimento de estratégia de marketing digital para
+                            agência de ecoturismo.</p>
                         <a href="#" class="inline-flex items-center text-tropical-200 hover:text-white font-medium">
                             Ver mais <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                         </a>
@@ -162,13 +270,16 @@
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Quer saber mais? Me chama aí</h2>
             <p class="text-tropical-100 mb-8 text-xl">Vamos criar algo incrível juntos!</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" class="px-8 py-3 bg-white text-tropical-600 rounded-full font-medium hover:bg-tropical-100 transition-colors duration-300 flex items-center">
+                <a href="#"
+                    class="px-8 py-3 bg-white text-tropical-600 rounded-full font-medium hover:bg-tropical-100 transition-colors duration-300 flex items-center">
                     <i data-feather="instagram" class="mr-2"></i> Instagram
                 </a>
-                <a href="#" class="px-8 py-3 bg-white text-tropical-600 rounded-full font-medium hover:bg-tropical-100 transition-colors duration-300 flex items-center">
+                <a href="#"
+                    class="px-8 py-3 bg-white text-tropical-600 rounded-full font-medium hover:bg-tropical-100 transition-colors duration-300 flex items-center">
                     <i data-feather="youtube" class="mr-2"></i> YouTube
                 </a>
-                <a href="#" class="px-8 py-3 bg-white text-tropical-600 rounded-full font-medium hover:bg-tropical-100 transition-colors duration-300 flex items-center">
+                <a href="#"
+                    class="px-8 py-3 bg-white text-tropical-600 rounded-full font-medium hover:bg-tropical-100 transition-colors duration-300 flex items-center">
                     <i data-feather="mail" class="mr-2"></i> Email
                 </a>
             </div>
@@ -192,4 +303,5 @@
         feather.replace();
     </script>
 </body>
+
 </html>
