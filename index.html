@@ -147,13 +147,16 @@
 
 <body class="bg-tropical-100 font-sans">
     <!-- Hero Section -->
-    <section
-        class="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-tropicalYellow to-tropicalOrangeDarkest">
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
 
-        <!-- <div class="absolute bg-tropicalYellow">
-            <img src="public/HeroSectionBanner.jpg" alt="Praia tropical" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-        </div> -->
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="public/hero-section-bg-video.mp4" type="video/mp4">
+        </video>
+
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-tropicalYellow/80 to-tropicalOrangeDarkest/80 z-[1]"></div>
+
         <div class="relative z-10 text-center px-4">
             <div class='box m-auto'>
                 <div class='wave'></div>
